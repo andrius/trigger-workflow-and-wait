@@ -36,6 +36,12 @@ validate_args() {
     wait_workflow=${INPUT_WAIT_WORKFLOW}
   fi
 
+  wait_workflow_delay=0
+  if [ -n "${INPUT_WAIT_WORKFLOW_DELAY}" ]
+  then
+    wait_workflow=${INPUT_WAIT_WORKFLOW_DELAY}
+  fi
+
   if [ -z "${INPUT_OWNER}" ]
   then
     echo "Error: Owner is a required argument."
@@ -139,6 +145,7 @@ main() {
 
   if [ "${wait_workflow}" = true ]
   then
+    sleep ${wait_workflow_delay}
     wait_for_workflow_to_finish
   else
     echo "Skipping waiting for workflow."

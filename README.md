@@ -21,6 +21,7 @@ When deploying an app you may need to deploy additional services, this Github Ac
 | `propagate_failure`      | False      | `true`        | Fail current job if downstream job fails. |
 | `trigger_workflow`       | False      | `true`        | Trigger the specified workflow. |
 | `wait_workflow`          | False      | `true`        | Wait for workflow to finish. |
+| `wait_workflow_delay`    | False      | 0             | Delay before wait for workflow loop starts |
 
 
 ## Example
@@ -63,6 +64,7 @@ INPUT_WAITING_INTERVAL=10 \
   INPUT_TRIGGER_WORKFLOW=true \
   INPUT_WORKFLOW_FILE_NAME="main.yml" \
   INPUT_WAIT_WORKFLOW=true \
+  INPUT_WAIT_WORKFLOW_DELAY=10 \
   INPUT_OWNER="keithconvictional" \
   INPUT_REPO="trigger-workflow-and-wait-example-repo1" \
   INPUT_GITHUB_TOKEN="<REDACTED>" \
