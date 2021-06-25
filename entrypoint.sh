@@ -36,7 +36,7 @@ validate_args() {
     wait_workflow=${INPUT_WAIT_WORKFLOW}
   fi
 
-  wait_workflow_delay=0
+  wait_workflow_delay=10
   if [ -n "${INPUT_WAIT_WORKFLOW_DELAY}" ]
   then
     wait_workflow_delay=${INPUT_WAIT_WORKFLOW_DELAY}
