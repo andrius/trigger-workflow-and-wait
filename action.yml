@@ -35,6 +35,9 @@ inputs:
   wait_workflow:
     description: 'Wait for workflow to finish. default: true'
     required: false
+  wait_workflow_delay:
+    description: 'Delay before Wait for workflow to finish loop starts. default: 0'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
