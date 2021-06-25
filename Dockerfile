@@ -2,7 +2,7 @@
 FROM alpine:latest
 
 RUN apk --update --no-cache add \
-	    curl \
+      curl \
       jq
 
 COPY entrypoint.sh /entrypoint.sh
