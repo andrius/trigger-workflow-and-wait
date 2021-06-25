@@ -39,7 +39,7 @@ validate_args() {
   wait_workflow_delay=0
   if [ -n "${INPUT_WAIT_WORKFLOW_DELAY}" ]
   then
-    wait_workflow=${INPUT_WAIT_WORKFLOW_DELAY}
+    wait_workflow_delay=${INPUT_WAIT_WORKFLOW_DELAY}
   fi
 
   if [ -z "${INPUT_OWNER}" ]
